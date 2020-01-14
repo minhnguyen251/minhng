@@ -1,0 +1,33 @@
+{
+  "name": "minh",
+  "version": "1.0.0",
+  "description": "Automation process",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "es6-promise": "^4.1.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "latest",
+    "gulp-csso": "^2.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-util": "^3.0.8"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://minhng-socialshaker@bitbucket.org/socialshaker/website_socialshaker.git"
+  },
+  "keywords": [
+    "wordpress",
+    "socialshaker",
+    "gulp",
+    "automation"
+  ],
+  "author": "Minh NGUYEN",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/socialshaker/website_socialshaker#readme"
+}

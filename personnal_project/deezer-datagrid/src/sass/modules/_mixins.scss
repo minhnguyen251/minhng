@@ -1,0 +1,97 @@
+// Smooth transition
+@mixin smoothTransition($duration: 0.3s) {
+	transition: $duration;
+}
+
+@mixin flexCenterAll {
+	//no supported flexbox
+	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// Mediaqueries
+@mixin maxWidth($max-width, $argument: null) {
+	@if ($argument) {
+		@media only screen and (max-width: $max-width) and ($argument) {
+			@content;
+		}
+	} @else {
+		@media only screen and (max-width: $max-width) {
+			@content;
+		}
+	}
+}
+
+@mixin minMaxWidth($min-width, $max-width, $argument: null) {
+	@if ($argument) {
+		@media only screen and (min-width: $min-width) and (max-width: $max-width) and ($argument) {
+			@content;
+		}
+	} @else {
+		@media only screen and (min-width: $min-width) and (max-width: $max-width) {
+			@content;
+		}
+	}
+}
+
+@mixin minWidth($min-width, $argument: null) {
+	@if ($argument) {
+		@media only screen and (min-width: $min-width) and ($argument) {
+			@content;
+		}
+	} @else {
+		@media only screen and (min-width: $min-width) {
+			@content;
+		}
+	}
+}
+
+@mixin maxHeight($max-height, $argument: null) {
+	@if ($argument) {
+		@media only screen and (max-height: $max-height) and ($argument) {
+			@content;
+		}
+	} @else {
+		@media only screen and (max-height: $max-height) {
+			@content;
+		}
+	}
+}
+
+@mixin minMaxHeight($min-height, $max-height, $argument: null) {
+	@if ($argument) {
+		@media only screen and (min-height: $min-height) and (max-height: $max-height) and ($argument) {
+			@content;
+		}
+	} @else {
+		@media only screen and (min-height: $min-height) and (max-height: $max-height) {
+			@content;
+		}
+	}
+}
+
+@mixin minHeight($min-height, $argument: null) {
+	@if ($argument) {
+		@media only screen and (min-height: $min-height) and ($argument) {
+			@content;
+		}
+	} @else {
+		@media only screen and (min-height: $min-height) {
+			@content;
+		}
+	}
+}
+
+@mixin maxHeightMaxWidth($max-width, $max-height) {
+	@media only screen and (max-height: $max-height) and (max-width: $max-width) {
+		@content;
+	}
+}
+
+@mixin mediaQueries($argument) {
+	@media only screen and ($argument) {
+		@content;
+	}
+}

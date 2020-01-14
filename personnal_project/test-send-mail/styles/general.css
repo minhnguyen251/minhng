@@ -1,0 +1,168 @@
+@import "reset.css";
+
+/* =============================================================================
+	Fontes	
+	========================================================================== */
+@font-face {
+    font-family: 'RobotoLight';
+    src: url('../fonte/RobotoLight.eot?');
+    src: url('../fonte/RobotoLight.eot?#iefix') format('embedded-opentype'),
+         url('../fonte/RobotoLight.woff?') format('woff'),
+         url('../fonte/RobotoLight.ttf?') format('truetype'),
+         url('../fonte/RobotoLight.svg#Roboto-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'RobotoMedium';
+    src: url('../fonte/RobotoMedium.eot?');
+    src: url('../fonte/RobotoMedium.eot?#iefix') format('embedded-opentype'),
+         url('../fonte/RobotoMedium.woff?') format('woff'),
+         url('../fonte/RobotoMedium.ttf?') format('truetype'),
+         url('../fonte/RobotoMedium.svg#RobotoMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MuseoSans-900Italic';
+    src: url('../fonte/MuseoSans-900Italic.eot?');
+    src: url('../fonte/MuseoSans-900Italic.eot?#iefix') format('embedded-opentype'),
+         url('../fonte/MuseoSans-900Italic.woff?') format('woff'),
+         url('../fonte/MuseoSans-900Italic.ttf?') format('truetype'),
+         url('../fonte/MuseoSans-900Italic.svg#MuseoSans-900Italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* =============================================================================
+	HTML5 element display
+   ========================================================================== */
+
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block;}
+audio[controls],canvas,video {display:inline-block;*display:inline;*zoom:1;}
+
+
+/* =============================================================================
+	Déclarations principales
+   ========================================================================== */
+body{background:#233b86;color:#829DA6;font:100%/1.2em 'RobotoLight';}
+img{border:0;}
+h1{
+	font-family:'MuseoSans-900Italic';
+	font-size:4.5em;
+	color:#FFF;
+	line-height:1em;
+	margin:80px 0 40px 0;
+	text-align:left;
+	text-transform:uppercase;
+	}
+h1 span{color:#36b8eb;}
+label{
+	color:#FFF;
+	display:block;
+	font-family:'MuseoSans-900Italic';
+	font-size:1.8em;
+	margin:0 0 15px 0;
+	text-transform:uppercase;
+}
+p{
+	color:#FFF;
+	font-size:1.4em;
+	font-weight:normal;
+	letter-spacing:3px;
+	line-height:1.6em;
+	margin:0 0 50px 40px;
+	width:600px;
+	}
+header{margin:5% 10%;}
+footer{	bottom:20px;position: absolute;right:10%;}
+footer .contact{
+	display:inline-block;
+	text-decoration: none;
+	margin-top: -9px;
+	vertical-align: middle;
+	height: 22px;
+}
+footer ul{display: inline-block;}
+footer ul li a{display:block;height: 22px;width: 22px;}
+footer .icon{
+	background-position:center;
+	background-repeat:no-repeat;
+	display:inline-block;
+	float: right;
+	margin-left: 10px;
+	height: 22px;
+	width: 22px;
+}
+footer .icon.facebook{background-image: url(../img/icon_fb.png);}
+footer .icon.linkedin{background-image: url(../img/icon_in.png);}
+a:link {color:#FFF;}
+a:visited {color:#36b8eb;}
+a:hover {color:#36b8eb;text-decoration:underline;}
+a:active {color:#36b8eb;} 
+::-moz-selection{background:#36b8eb;color:#FFF;}
+::selection{background:#36b8eb;color:#FFF;}
+.container{
+	margin:0 auto;
+	overflow:hidden;
+	padding:0;
+	position:relative;
+	background: url(../img/bckg.jpg) center no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+	}
+[data-whatinput="mouse"] *:focus,
+[data-whatinput="touch"] *:focus{outline: none;}
+.Demo{margin-left:40px;}
+.Demo-marge{margin-left:-10px;}
+.Demo-label {margin-right: 1.25rem;vertical-align: middle;}
+.Demo-wrap {
+    border: 2px solid #FFF;
+    display: inline-block;
+    margin-left: -6px;
+    overflow: hidden;
+    -webkit-transform: skewX(-30deg);
+    transform: skewX(-30deg);
+    vertical-align: middle;
+}
+.Demo-input,
+button {
+    background-color: transparent;
+    border: 0;
+    box-sizing: border-box;
+    margin:0;
+    height:60px;
+    font-size: 1.5em;
+    letter-spacing:3px;
+    padding: 0;
+    -moz-osx-font-smoothing:#FFF;
+    -webkit-font-smoothing: antialiased;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, #233B86 50%, #233B86 100%);
+    background-position: 200% 50%;
+    background-repeat: no-repeat;
+    background-size: 200% 100%;
+    color: #FFF;
+    left: -1.5625rem;
+    padding:1rem 0.625rem 1rem 2.1875rem;
+    position: relative;
+    -webkit-transform: skewX(30deg);
+    transform: skewX(30deg);
+    transition: all 250ms ease-in-out;
+    width: calc(100% + 50px);
+}
+button.Demo-input {padding-right:2rem !important;font-family:'RobotoMedium';}
+.Demo-input:focus,
+button:focus,
+.Demo-input:active,
+button:active{background-position:100% 50%;color:#FFF;}
+
+
+/* =============================================================================
+	tablet & mobile
+   ========================================================================== */
+@media screen and (max-width:768px) {
+	header{margin:5% 10% 20% 5%;}
+	p{width:100%;}
+	.btn{margin-top:-2px;}
+}

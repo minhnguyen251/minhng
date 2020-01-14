@@ -1,0 +1,31 @@
+@import "modules/variables";
+
+body {
+	font-family: 'Roboto', 'Arial', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 100;
+
+	color: $mainTextColor;
+}
+
+input, button, input::placeholder {
+	font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+input:focus, button:focus {
+	outline: none;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+input, button {
+	border: 0;
+	background: transparent;
+	box-shadow: none;
+	appearance: none;
+	border-radius: 0;
+}

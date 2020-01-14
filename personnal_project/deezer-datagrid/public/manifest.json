@@ -1,0 +1,15 @@
+{
+  "short_name": "Deezer Test",
+  "name": "Deezer Test DataGrid Application",
+  "icons": [
+    {
+      "src": "https://e-cdns-files.dzcdn.net/cache/images/common/favicon/favicon.a6a53d55264841165a904dbea19d5d73.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

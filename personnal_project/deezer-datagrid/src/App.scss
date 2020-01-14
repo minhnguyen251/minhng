@@ -1,0 +1,53 @@
+@import 'sass/reset.scss';
+@import 'sass/modules/mixins.scss';
+
+.app {
+	&__ctn {
+		position: relative;
+		//no supported flexbox
+		display: block;
+		display: flex;
+		flex-direction: column;
+		width: 100vw;
+		min-height: 100vh;
+
+		@include smoothTransition;
+
+		&:before, &:after {
+			content: '';
+			display: block;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			z-index: -1;
+
+			@include smoothTransition(2s);
+		}
+
+		&:before {
+			background-image: linear-gradient(to right, $deezerColor1, $deezerColor2);
+		}
+
+		&:after {
+			opacity: 0;
+			background-image: linear-gradient(to right, $deezerColor3, $deezerColor4);
+		}
+	}
+
+	&--submitted {
+		&:before {
+			opacity: 0;
+		}
+
+		&:after {
+			opacity: 1;
+		}
+
+		.search--submitted:hover {
+			background-color: rgba(lighten($deezerColor3, 20%), 0.8);
+		}
+	}
+}

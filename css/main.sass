@@ -1,0 +1,422 @@
+$red: #CD192F
+
+body, html
+  width: 100%
+  height: 100%
+  margin: 0
+  padding: 0
+  font-family: 'Open Sans Condensed', helvetica, arial, sans-serif
+  font-size: 20px
+  color: white
+
+a
+  text-decoration: none
+
+.container
+  padding: 10px
+
+
+/* Accueil */
+
+header
+  background-color: $red
+  .navbar
+    min-height: 70px
+
+  .logo
+    padding: 5px 0
+    text-align: center
+
+  .vertical-line
+    border-left: 1px solid white
+    height: 50px
+
+/* Menu mobile */
+
+.menubtn
+  display: none
+  position: absolute
+  right: 50px
+  top: 20px
+  width: 30px
+  height: 30px
+  cursor: pointer
+  span
+    display: block
+    width: 30px
+    height: 3px
+    position: absolute
+    background: white
+    -webkit-transition: all 300ms ease
+    transition: all 300ms ease
+    &::before
+      content: ''
+      width: 30px
+      height: 3px
+      position: absolute
+      top: 8px
+      background: white
+      -webkit-transition: all 100ms ease
+      transition: all 100ms ease
+    &::after
+      content: ''
+      width: 30px
+      height: 3px
+      position: absolute
+      top: 16px
+      background: white
+      -webkit-transition: all 300ms ease
+      transition: all 300ms ease
+  &.opened span
+    -webkit-transform: rotate(45deg)
+    transform: rotate(45deg)
+    top: 7px
+    &::before
+      opacity: 0
+    &::after
+      -webkit-transform: rotate(-90deg)
+      transform: rotate(-90deg)
+      top: 0px
+
+.main-menu
+  ul
+    li
+      display: inline-block
+      margin: 5px 10px
+      a
+        color: white
+        text-transform: uppercase
+        padding: 10px
+        &:hover
+          background-color: white
+          color: $red
+          -webkit-transition: all 500ms ease
+        &:visited
+          border-bottom: 1px solid white
+        i
+          font-size: 25px
+  &.mobile-menu
+    display: none
+    padding: 10px
+    background: $red
+    border: 1px solid white
+    position: absolute
+    right: 10px
+    top: 55px
+    -webkit-transition: all 300ms ease
+    transition: all 300ms ease
+    &.opened
+      display: block
+    &::before
+      content: ''
+      position: absolute
+      top: -6px
+      right: 40px
+      width: 10px
+      height: 10px
+      border: 1px solid white
+      background-color: $red
+      z-index: 1
+      -webkit-transform: rotate(45deg)
+      transform: rotate(45deg)
+    ul
+      list-style: none
+      text-align: left
+      margin-bottom: 0
+      z-index: 2
+      li
+        display: block
+        padding: 0
+        margin: 5px 0
+        &:nth-last-child(3)
+          display: none
+        &:nth-last-child(1), &:nth-last-child(2)
+          display: inline-block
+        a
+          display: inline
+          padding: 0 10px
+          margin: 0
+          line-height: 7px
+          -webkit-transition: all 200ms ease
+          transition: all 200ms ease
+          &:hover
+            color: red
+
+.mini-mail-id a
+  display: inline-block
+  padding-right: 10px
+
+/* My description */
+
+.first-part
+  height: 100%
+  background-color: $red
+  padding-top: 8%
+  h1
+    margin-top: 20%
+    padding-right: 20px
+    font-size: 30px
+    color: white
+
+.my-info
+  display: block
+  position: absolute
+  float: left
+  top: 32%
+  left: 12%
+  font-size: 35px
+
+
+.comment1
+  color: #390007
+
+/* Mes services */
+
+#my-design
+  background-color: #3C9FEE
+  max-height: 100% auto
+
+.text-center
+  padding-top: 50px
+
+.my-design h2
+  font-size: 50px
+  padding-bottom: 18px
+
+.comment2
+  color: #033F6F
+
+#services
+  >div
+    padding: 5px
+  p
+    padding: 20px 0 40px
+
+a.btn
+  width: 200px
+  margin: 30px auto 50px
+  padding: 10px 20px
+  color: white
+  background-color: $red
+  font-size: 20px
+  border-radius: inherit
+  &:hover
+    color: white
+    text-decoration: none
+    background-color: transparent
+    border: solid 1px white
+    transition: background-color 1s
+  &:visited
+    text-decoration: overline
+    color: white
+
+/* CV section */
+
+#cv
+  background-color: #607D8B
+  height: 100% auto
+  .row
+    margin: 0 20px
+  h2
+    padding: 90px 0 40px
+    margin-top: 0
+    text-align: center
+  .col-sm-2
+    background: url(../images/beat-heart1.png) repeat-x
+    padding: 100px 15px 0
+
+.annee
+  font-size: 50px
+  color: #212C32
+  margin: 0
+
+.description-cv
+  margin: 10px 0
+
+.box
+  width: 150px
+  height: auto
+  margin: 0 auto
+  border: 1px solid white
+
+.my-stats
+  margin-top: 30px
+  text-align: center
+  height: 100
+  > .row > div
+    min-height: 200px
+
+.number
+  margin: 0
+  font-size: 80px
+  font-weight: bold
+
+.value
+  margin: 0
+  padding-bottom: 20px
+  font-size: 16px
+
+.bn
+  padding-bottom: 60px
+  margin-bottom: 0
+
+/* portfolio */
+
+#portfolio
+  background-color: #3E3E3E
+  height: 100% auto
+
+.comment3
+  color: #7B7B7B
+
+/* photos portfolio */
+
+.grid
+  position: relative
+  overflow: hidden
+  width: 100vw
+
+#portfolio img
+  width: 100%
+  height: auto
+
+.img-content
+  background: rgba(0, 0, 0, 0.8)
+  color: white
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  margin: auto 0
+  padding-top: 120px
+  padding-left: 20px
+  visibility: hidden
+  opacity: 0
+  -webkit-transition: all 0.2s ease
+
+.img-wrap:hover .img-content
+  visibility: visible
+  opacity: 1
+
+.img-heading
+  font-size: 25px
+  margin: 0
+
+.comment4
+  color: #ababab
+
+.heading-desc
+  font-size: 18px
+  margin: 0
+
+/* contact */
+
+#contact
+  background-color: #F3F3F3
+  height: 100%
+  color: #333
+
+.contact-box
+  border: 1px solid #5C5C5C
+  width: 140px
+  height: 140px
+  padding-top: 32px
+  margin: 20px auto
+  img
+    -webkit-filter: grayscale(100%)
+    filter: grayscale(100%)
+    height: 33px
+  a
+    color: inherit
+  &:hover
+    a, p
+      color: $red
+      -webkit-transition: all 0.5s
+    border: 1px solid $red
+    -webkit-transition: all 0.5s
+    img
+      -webkit-filter: grayscale(0%)
+      filter: grayscale(0%)
+      -webkit-transition: all 0.5s
+  p
+    font-size: 40px
+    margin: 0
+
+.bye
+  margin: 60px auto
+  color: grey
+
+.img-wrap:hover grid img
+  transform: scale(2, 2)
+  transform-origin: 0 0
+
+/*---media---*/
+@media only screen and (min-width: 1050px)
+  .main-menu
+    display: block
+
+@media only screen and (max-width: 1050px)
+  .menubtn
+    display: block
+  header .logo
+    text-align: left
+    padding-left: 5%
+
+@media only screen and (min-width: 768px) and (max-width: 1050px)
+  .my-img
+    width: 80%
+
+@media only screen and (max-width: 767px)
+  .first-part
+    h1
+      font-size: 26px
+      line-height: 1.3
+  #cv
+    .timeline
+      > div
+        margin-bottom: 50px
+        padding-top: 90px
+        background: url(../images/beat-heart.svg) repeat-x
+        text-align: center
+        .description-cv
+          margin-bottom: 50px
+  .my-stats
+    margin-top: 0
+  .box
+    margin-top: 20px
+
+@media only screen and (min-width: 480px) and (max-width: 767px)
+  .first-part
+    h1
+      margin-top: 0
+    img
+      display: none
+
+@media only screen and (min-width: 480px)
+  .main-menu.mobile-menu::before
+    right: 50px
+
+@media only screen and (max-width: 480px)
+  .first-part
+    h1
+      margin-top: 10%
+    img
+      padding-top: 0
+      width: 70%
+  .menubtn
+    right: 40px
+
+/* aos library */
+[data-aos="example-anim3"]
+  -webkit-transform: rotate(360deg)
+  transform: rotate(360deg)
+  opacity: 0
+  -webkit-transition-property: opacity, -webkit-transform
+  transition-property: opacity, -webkit-transform
+  transition-property: transform, opacity
+  transition-property: transform, opacity, -webkit-transform
+  &.aos-animate
+    -webkit-transform: rotate(0)
+    transform: rotate(0)
+    opacity: 1

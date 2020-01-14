@@ -1,0 +1,101 @@
+@import "../../sass/modules/variables";
+@import "../../sass/modules/mixins";
+
+.search {
+	&__ctn {
+		width: 100vw;
+		height: 100vh;
+
+		@include flexCenterAll;
+
+		@include smoothTransition;
+
+		h1 {
+			font-weight: 100;
+			text-align: center;
+			font-style: italic;
+
+			padding: 0 1vw;
+			margin-top: 0;
+			font-size: 5vw;
+		}
+
+		form {
+			//no supported flexbox
+			display: inline-block;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0 10px;
+
+			@include smoothTransition;
+
+			input {
+				width: 90%;
+				height: 10vh;
+				border: 0;
+				font-size: 3rem;
+				color: $mainTextColor;
+				border-bottom: 1px solid transparent;
+
+				&:focus {
+					border-bottom-color: $mainTextColor;
+				}
+
+				&::placeholder {
+					font-weight: 100;
+					color: rgba($mainTextColor, 0.5);
+				}
+				@include maxWidth(767px) {
+					font-size: 7vw;
+				}
+			}
+
+			button {
+				@include smoothTransition;
+				cursor: pointer;
+
+				img {
+					height: 10vh;
+					@include maxWidth(767px) {
+						width: 10vw;
+						height: auto;
+					}
+				}
+
+				&:hover {
+					transform: rotate3d(1, 1, 0, 360deg);
+				}
+			}
+		}
+
+	}
+
+	//When user submits the search form
+	&--submitted {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100vw;
+		height: 10vh;
+		max-height: 120px;
+
+		z-index: 9;
+		padding-top: 10px;
+		background-image: linear-gradient(to top, rgba(lighten($deezerColor3, 20%), 0.7), rgba(black, 0));
+		form {
+			max-width: 400px;
+			@include maxWidth(480px) {
+				max-width: 300px;
+			}
+			input {
+				font-size: 2rem;
+				height: 2.5rem;
+			}
+			button img {
+				width: auto;
+				height: 2.5rem;
+			}
+		}
+	}
+}

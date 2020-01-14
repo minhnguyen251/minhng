@@ -1,0 +1,46 @@
+@import "../../sass/modules/variables";
+@import "../../sass/modules/mixins";
+
+.filter__input {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 10vh;
+	max-height: 120px;
+	z-index: 5;
+	text-align: center;
+
+	@include smoothTransition;
+
+	background-image: linear-gradient(to bottom, rgba(darken($deezerColor4, 20%), 0.7), rgba(black, 0));
+
+
+	input {
+		margin-top: 20px;
+		@include maxWidth(480px) {
+			margin-top: 5px;
+			font-size: 1.4rem;
+		}
+		height: 40px;
+		width: 100%;
+		max-width: 300px;
+		text-align: center;
+		font-size: 1.5rem;
+		font-weight: 100;
+		color: white;
+		border-bottom: 1px solid transparent;
+
+		&:focus {
+			border-bottom-color: white;
+		}
+
+		&::placeholder {
+			color: $deezerColor4;
+		}
+	}
+
+	&:hover {
+		background-color: rgba(darken($deezerColor4, 20%), 0.7);
+	}
+}

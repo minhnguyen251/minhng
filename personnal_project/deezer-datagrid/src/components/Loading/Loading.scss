@@ -1,0 +1,63 @@
+//Ref: https://codepen.io/tonynguyen25/pen/WxXjJL
+@import "../../sass/modules/variables";
+@import "../../sass/modules/mixins";
+@import "../../sass/modules/keyframes";
+
+.loading__ctn {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 10;
+
+	background-color: rgba(black, 0.5);
+
+	@include flexCenterAll;
+	.bar__ctn {
+		display: inline-block;
+		cursor: pointer;
+		background: transparent;
+		height: 50px;
+		transform: rotate(180deg);
+
+		.first-bar,
+		.second-bar,
+		.third-bar,
+		.fourth-bar {
+			display: inline-block;
+			border-radius: 13px;
+			width: 9px;
+			margin-right: 6px;
+			transition: .5s;
+			animation: equalize 4s 0s infinite;
+			animation-timing-function: linear;
+			vertical-align: top;
+		}
+
+		.first-bar {
+			height: 40px;
+			background: $deezerColor1;
+			transition: 0.5s;
+			animation-delay: -1.9s;
+		}
+
+		.second-bar {
+			height: 48px;
+			background: $deezerColor2;
+			animation-delay: -2.9s;
+		}
+
+		.third-bar {
+			height: 44px;
+			background: darken($deezerColor3, 20%);
+			animation-delay: -3.9s;
+		}
+
+		.fourth-bar {
+			height: 36px;
+			background: $deezerColor4;
+			animation-delay: -4.9s;
+		}
+	}
+}
